@@ -1,3 +1,5 @@
+<img src="assets/icon.png" width="128" alt="SimpleTPA icon">
+
 # SimpleTPA
 A simple Paper 26.3 teleport plugin with TPA, TPAHere, and configurable settings.
 
