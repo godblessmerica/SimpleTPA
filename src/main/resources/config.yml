@@ -1,0 +1,58 @@
+# Seconds. Delay 0 means instant teleport. No request cooldown.
+teleport-delay-seconds: 3
+request-expiry-seconds: 60
+cancel-on-movement: false
+cancel-on-damage: true
+
+# MiniMessage formatting: <green>text</green>, <gray>text</gray>, etc.
+# Placeholders: <player>, <seconds>, <accept>, <decline>, <cancel>.
+# Keep button placeholders in request messages to display clickable controls.
+messages:
+  received-tpa: '<yellow><player> wants to teleport to you.</yellow> <accept> <decline>'
+  sent-tpa: '<gray>You sent a teleport request to <player>. They have <seconds> seconds to accept.</gray> <cancel>'
+  received-here: '<yellow><player> wants you to teleport to them.</yellow> <accept> <decline>'
+  sent-here: '<gray>You asked <player> to teleport to you. They have <seconds> seconds to accept.</gray> <cancel>'
+  button-accept: '<green>[Accept]</green>'
+  button-decline: '<red>[Decline]</red>'
+  button-cancel: '<red>[Cancel]</red>'
+  pending-request: '<red>You already have a pending request to <player>. Cancel it before sending another.</red>'
+  accepted-sender: '<green><player> accepted your teleport request.</green>'
+  accepted-receiver: '<green>You accepted <player>''s teleport request.</green>'
+  countdown-mover: '<yellow>Teleporting in <seconds> seconds.</yellow>'
+  countdown-other: '<yellow><player> will teleport to you in <seconds> seconds.</yellow>'
+  success-mover: '<green>You teleported to <player>.</green>'
+  success-other: '<green><player> teleported to you.</green>'
+  damage-mover: '<red>Teleport cancelled because you took damage.</red>'
+  damage-other: '<red><player>''s teleport was cancelled because they took damage.</red>'
+  movement-mover: '<red>Teleport cancelled because you moved.</red>'
+  movement-other: '<red><player>''s teleport was cancelled because they moved.</red>'
+  declined-sender: '<red><player> declined your teleport request.</red>'
+  declined-receiver: '<gray>You declined <player>''s teleport request.</gray>'
+  cancelled-sender: '<gray>You cancelled your teleport request to <player>.</gray>'
+  cancelled-receiver: '<gray><player> cancelled their teleport request to you.</gray>'
+  expired-sender: '<gray>Your teleport request to <player> expired.</gray>'
+  expired-receiver: '<gray><player>''s teleport request expired.</gray>'
+  disconnected: '<red>Teleport request or pending teleport cancelled because <player> disconnected.</red>'
+  toggle-off: '<gray>Teleport requests disabled. Players can no longer send you requests.</gray>'
+  toggle-on: '<green>Teleport requests enabled. Players can send you requests.</green>'
+  toggle-save-failed: '<red>Could not save your request preference. Please try again.</red>'
+  not-accepting: '<red><player> is not accepting teleport requests.</red>'
+  self-request: '<red>You cannot send a teleport request to yourself.</red>'
+  offline: '<red><player> is not online.</red>'
+  no-request-from: '<red>You have no pending request from <player>.</red>'
+  no-incoming: '<red>You have no pending teleport requests.</red>'
+  multiple-incoming: '<yellow>You have multiple requests. Use /tpa accept \<player> or /tpa decline \<player>.</yellow>'
+  no-outgoing: '<red>You have no outgoing teleport request to cancel.</red>'
+  stale-button: '<red>That teleport request is no longer active.</red>'
+  busy: '<red>You or that player already have a teleport pending.</red>'
+  failed: '<red>Teleport failed. Please try again.</red>'
+  no-permission: '<red>You do not have permission to use this command.</red>'
+  players-only: '<red>Only players can use this command.</red>'
+  reloaded: '<green>Teleport plugin configuration reloaded.</green>'
+  reload-failed: '<red>Configuration could not be reloaded. Check the server console.</red>'
+  usage: '<yellow>Use /tpa \<player>, /tpahere \<player>, /tpa accept [player], /tpa decline [player], /tpa cancel, /tpa toggle, or /back.</yellow>'
+  usage-here: '<yellow>Use /tpahere \<player>.</yellow>'
+  usage-back: '<yellow>Use /back.</yellow>'
+  no-back: '<red>You have no previous teleport to return from. Use /tpa or /tpahere first.</red>'
+  countdown-back: '<yellow>Returning to your previous location in <seconds> seconds.</yellow>'
+  success-back: '<green>You returned to your previous location.</green>'

@@ -1,0 +1,22 @@
+name: SimpleTPA
+version: 1.0.0
+main: dev.adan.simpletpa.SimpleTpaPlugin
+api-version: '26.3'
+description: Teleport requests with clickable chat controls and a one-use return.
+commands:
+  tpa:
+    description: Send or manage teleport requests
+    usage: /tpa <player|accept|decline|cancel|toggle|reload>
+  tpahere:
+    description: Ask a player to teleport to you
+    usage: /tpahere <player>
+  back:
+    description: Return once after a successful request teleport
+    usage: /back
+permissions:
+  simpletpa.use:
+    description: Use teleport requests and back
+    default: true
+  simpletpa.reload:
+    description: Reload SimpleTPA settings and messages
+    default: op
