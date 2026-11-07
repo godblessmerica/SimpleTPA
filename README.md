@@ -3,6 +3,8 @@
 # SimpleTPA
 A simple Paper 26.3 teleport plugin with TPA, TPAHere, and configurable settings.
 
+[Download SimpleTPA](../../releases/latest)
+
 > [!IMPORTANT]
 > **SimpleTPA is developed almost entirely using AI.** It’s written using [OpenAI’s Codex](https://openai.com/codex/), and directed and tested by a human.
 >
@@ -54,10 +56,10 @@ cancel-on-damage: true
 
 Players can move during the countdown by default. Taking damage cancels the teleport.
 
-Messages, colors, and button text are also customizable in `config.yml`. Messages support MiniMessage formatting, such as `<green>text</green>`.
+Messages, colors, and button text are also customizable in `config.yml`. Messages support [MiniMessage formatting](https://docs.advntr.dev/minimessage/format.html), such as `<green>text</green>`.
 
 Run `/tpa reload` to apply changes without restarting the server.
 
 ## Requirements
 - [Paper 26.3](https://papermc.io/downloads/paper)
-- [Java 25 or newer](https://www.java.com/en/download/)
+- [Java 25 or newer](https://adoptium.net/temurin/releases/?version=25)
