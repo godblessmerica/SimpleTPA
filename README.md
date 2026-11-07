@@ -59,5 +59,5 @@ Messages, colors, and button text are also customizable in `config.yml`. Message
 Run `/tpa reload` to apply changes without restarting the server.
 
 ## Requirements
-- Paper 26.3 https://papermc.io/downloads/paper
-- Java 25 or newer https://www.java.com/en/download/
+- [Paper 26.3](https://papermc.io/downloads/paper)
+- [Java 25 or newer](https://www.java.com/en/download/)
