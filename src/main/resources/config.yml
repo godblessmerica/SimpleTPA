@@ -3,6 +3,8 @@ teleport-delay-seconds: 3
 request-expiry-seconds: 60
 cancel-on-movement: false
 cancel-on-damage: true
+# Check public GitHub releases in the background. No automatic downloads.
+check-for-updates: true
 
 # MiniMessage formatting: <green>text</green>, <gray>text</gray>, etc.
 # Placeholders: <player>, <seconds>, <accept>, <decline>, <cancel>.
@@ -41,7 +43,7 @@ messages:
   offline: '<red><player> is not online.</red>'
   no-request-from: '<red>You have no pending request from <player>.</red>'
   no-incoming: '<red>You have no pending teleport requests.</red>'
-  multiple-incoming: '<yellow>You have multiple requests. Use /tpa accept \<player> or /tpa decline \<player>.</yellow>'
+  multiple-incoming: '<yellow>You have multiple requests. Use /tpaccept \<player> or /tpdeny \<player>.</yellow>'
   no-outgoing: '<red>You have no outgoing teleport request to cancel.</red>'
   stale-button: '<red>That teleport request is no longer active.</red>'
   busy: '<red>You or that player already have a teleport pending.</red>'
@@ -50,9 +52,31 @@ messages:
   players-only: '<red>Only players can use this command.</red>'
   reloaded: '<green>Teleport plugin configuration reloaded.</green>'
   reload-failed: '<red>Configuration could not be reloaded. Check the server console.</red>'
-  usage: '<yellow>Use /tpa \<player>, /tpahere \<player>, /tpa accept [player], /tpa decline [player], /tpa cancel, /tpa toggle, or /back.</yellow>'
+  usage: '<yellow>Use <command>. See /tpa help for available commands.</yellow>'
   usage-here: '<yellow>Use /tpahere \<player>.</yellow>'
   usage-back: '<yellow>Use /back.</yellow>'
   no-back: '<red>You have no previous teleport to return from. Use /tpa or /tpahere first.</red>'
   countdown-back: '<yellow>Returning to your previous location in <seconds> seconds.</yellow>'
   success-back: '<green>You returned to your previous location.</green>'
+  help-header: '<gold>SimpleTPA commands</gold>'
+  help-tpa: '<yellow><command></yellow><gray> - Request to teleport to a player.</gray>'
+  help-here: '<yellow><command></yellow><gray> - Ask a player to teleport to you.</gray>'
+  help-accept: '<yellow><command></yellow><gray> - Accept an incoming request.</gray>'
+  help-deny: '<yellow><command></yellow><gray> - Decline an incoming request.</gray>'
+  help-cancel: '<yellow><command></yellow><gray> - Cancel your outgoing request.</gray>'
+  help-toggle: '<yellow><command></yellow><gray> - Enable or disable incoming requests.</gray>'
+  help-back: '<yellow><command></yellow><gray> - Return once after a request teleport.</gray>'
+  help-help: '<yellow><command></yellow><gray> - List commands you can use.</gray>'
+  help-config: '<yellow><command></yellow><gray> - View or change settings, excluding messages.</gray>'
+  help-reload: '<yellow><command></yellow><gray> - Reload configuration and messages.</gray>'
+  help-version: '<yellow><command></yellow><gray> - Show the installed plugin version.</gray>'
+  version: '<gold>SimpleTPA version <current></gold>'
+  config-header: '<gold>SimpleTPA settings</gold>'
+  config-value: '<yellow><setting>: <value></yellow>'
+  config-changed: '<green><setting> changed: <old> → <value>.</green>'
+  config-invalid: '<red>Invalid value. Use whole seconds (delay 0–3600, expiry 1–86400), or true/false for switches.</red>'
+  config-unknown: '<red>Unknown setting. Use /tpa config to list editable settings. Messages cannot be changed in-game.</red>'
+  config-save-failed: '<red>Could not save configuration. Settings were not changed. Check the server console.</red>'
+  update-available: '<gold>[SimpleTPA] An update is available!</gold>'
+  update-versions: '<yellow><current> → <latest></yellow>'
+  update-link: '<green>[Download latest version]</green>'

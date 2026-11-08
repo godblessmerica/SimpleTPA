@@ -1,22 +1,52 @@
 name: SimpleTPA
-version: 1.0.0
+version: 1.1.0
 main: dev.adan.simpletpa.SimpleTpaPlugin
 api-version: '26.3'
 description: Teleport requests with clickable chat controls and a one-use return.
 commands:
   tpa:
-    description: Send or manage teleport requests
-    usage: /tpa <player|accept|decline|cancel|toggle|reload>
+    description: Send a teleport request or use help, config, reload and version
+    usage: /tpa <player|help|config|reload|version>
   tpahere:
     description: Ask a player to teleport to you
     usage: /tpahere <player>
+  tpaccept:
+    description: Accept an incoming teleport request
+    usage: /tpaccept [player]
+  tpdeny:
+    description: Decline an incoming teleport request
+    usage: /tpdeny [player]
+  tpcancel:
+    description: Cancel your outgoing teleport request
+    usage: /tpcancel
+  tptoggle:
+    description: Enable or disable incoming teleport requests
+    usage: /tptoggle
   back:
     description: Return once after a successful request teleport
     usage: /back
 permissions:
-  simpletpa.use:
-    description: Use teleport requests and back
+  tpa.tpa:
+    description: Send TPA requests and accept, deny or cancel requests
     default: true
-  simpletpa.reload:
-    description: Reload SimpleTPA settings and messages
+  tpa.tphere:
+    description: Send TPAHere requests and accept, deny or cancel requests
+    default: true
+  tpa.toggle:
+    description: Toggle incoming teleport requests
+    default: true
+  tpa.back:
+    description: Return after a successful request teleport
+    default: true
+  tpa.help:
+    description: View permitted commands and their descriptions
+    default: true
+  tpa.config:
+    description: View and edit settings in-game
+    default: op
+  tpa.reload:
+    description: Reload configuration and messages
+    default: op
+  tpa.version:
+    description: View the installed plugin version
     default: op
